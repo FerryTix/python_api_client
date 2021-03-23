@@ -51,6 +51,12 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
 uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | 
@@ -61,6 +67,12 @@ try:
 except ApiException as e:
     print("Exception when calling DefaultApi->faehr_card_uuid_balance_get: %s\n" % e)
 
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
 uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | 
@@ -70,6 +82,12 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->faehr_card_uuid_get: %s\n" % e)
+
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
@@ -82,6 +100,12 @@ try:
 except ApiException as e:
     print("Exception when calling DefaultApi->faehr_card_uuid_topup_post: %s\n" % e)
 
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
 body = swagger_client.MachineConfiguration() # MachineConfiguration | 
@@ -92,6 +116,12 @@ try:
 except ApiException as e:
     print("Exception when calling DefaultApi->machines_default_config_patch: %s\n" % e)
 
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
 
@@ -100,6 +130,12 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->machines_get: %s\n" % e)
+
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
@@ -110,6 +146,12 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->machines_uuid_commands_get: %s\n" % e)
+
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
@@ -122,6 +164,12 @@ try:
 except ApiException as e:
     print("Exception when calling DefaultApi->machines_uuid_commands_post: %s\n" % e)
 
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
 body = swagger_client.MachineConfiguration() # MachineConfiguration | 
@@ -133,6 +181,12 @@ try:
 except ApiException as e:
     print("Exception when calling DefaultApi->machines_uuid_config_patch: %s\n" % e)
 
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
 uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | 
@@ -142,6 +196,12 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->machines_uuid_get: %s\n" % e)
+
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
@@ -154,6 +214,12 @@ try:
 except ApiException as e:
     print("Exception when calling DefaultApi->machines_uuid_replace_paper_roll_post: %s\n" % e)
 
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
 uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | 
@@ -163,6 +229,12 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->machines_uuid_status_get: %s\n" % e)
+
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
@@ -175,6 +247,12 @@ try:
 except ApiException as e:
     print("Exception when calling DefaultApi->machines_uuid_status_patch: %s\n" % e)
 
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
+
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
 body = swagger_client.TicketSale() # TicketSale | 
@@ -183,6 +261,12 @@ try:
     api_instance.ticket_sales_post(body)
 except ApiException as e:
     print("Exception when calling DefaultApi->ticket_sales_post: %s\n" % e)
+
+# Configure API key authorization: ApiKeyAuth
+configuration = swagger_client.Configuration()
+configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
@@ -245,7 +329,12 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
- All endpoints do not require authorization.
+
+## ApiKeyAuth
+
+- **Type**: API key
+- **API key parameter name**: X-API-KEY
+- **Location**: HTTP header
 
 
 ## Author
