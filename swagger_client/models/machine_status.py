@@ -35,7 +35,8 @@ class MachineStatus(object):
         'cpu_temperature': 'float',
         'tickets_sold_today': 'MachineStatusTicketsSoldToday',
         'volume_of_sales_today': 'int',
-        'waiting': 'list[WaitingPassenger]'
+        'waiting': 'list[WaitingPassenger]',
+        'sale_counter': 'int'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class MachineStatus(object):
         'cpu_temperature': 'cpuTemperature',
         'tickets_sold_today': 'ticketsSoldToday',
         'volume_of_sales_today': 'volumeOfSalesToday',
-        'waiting': 'waiting'
+        'waiting': 'waiting',
+        'sale_counter': 'saleCounter'
     }
 
-    def __init__(self, vending=None, battery_charge=None, estimated_receipt_paper_fill_level=None, receipt_paper_roll_length=None, cpu_temperature=None, tickets_sold_today=None, volume_of_sales_today=None, waiting=None):  # noqa: E501
+    def __init__(self, vending=None, battery_charge=None, estimated_receipt_paper_fill_level=None, receipt_paper_roll_length=None, cpu_temperature=None, tickets_sold_today=None, volume_of_sales_today=None, waiting=None, sale_counter=None):  # noqa: E501
         """MachineStatus - a model defined in Swagger"""  # noqa: E501
         self._vending = None
         self._battery_charge = None
@@ -59,6 +61,7 @@ class MachineStatus(object):
         self._tickets_sold_today = None
         self._volume_of_sales_today = None
         self._waiting = None
+        self._sale_counter = None
         self.discriminator = None
         if vending is not None:
             self.vending = vending
@@ -76,6 +79,8 @@ class MachineStatus(object):
             self.volume_of_sales_today = volume_of_sales_today
         if waiting is not None:
             self.waiting = waiting
+        if sale_counter is not None:
+            self.sale_counter = sale_counter
 
     @property
     def vending(self):
@@ -244,6 +249,29 @@ class MachineStatus(object):
         """
 
         self._waiting = waiting
+
+    @property
+    def sale_counter(self):
+        """Gets the sale_counter of this MachineStatus.  # noqa: E501
+
+        Current sale counter. Each vending machine has its own counter, that increases when a sale (TicketSale or TopUp) is completed. The sale counter can't be changed from the outside.  # noqa: E501
+
+        :return: The sale_counter of this MachineStatus.  # noqa: E501
+        :rtype: int
+        """
+        return self._sale_counter
+
+    @sale_counter.setter
+    def sale_counter(self, sale_counter):
+        """Sets the sale_counter of this MachineStatus.
+
+        Current sale counter. Each vending machine has its own counter, that increases when a sale (TicketSale or TopUp) is completed. The sale counter can't be changed from the outside.  # noqa: E501
+
+        :param sale_counter: The sale_counter of this MachineStatus.  # noqa: E501
+        :type: int
+        """
+
+        self._sale_counter = sale_counter
 
     def to_dict(self):
         """Returns the model properties as a dict"""

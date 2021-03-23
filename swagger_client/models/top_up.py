@@ -36,6 +36,7 @@ class TopUp(object):
         'paid': 'int',
         'payment': 'Payment',
         'initial': 'bool',
+        'sale_counter': 'int',
         'signature': 'str'
     }
 
@@ -48,10 +49,11 @@ class TopUp(object):
         'paid': 'paid',
         'payment': 'payment',
         'initial': 'initial',
+        'sale_counter': 'saleCounter',
         'signature': 'signature'
     }
 
-    def __init__(self, uuid=None, _for=None, issued_at=None, issued_by=None, amount=None, paid=None, payment=None, initial=None, signature=None):  # noqa: E501
+    def __init__(self, uuid=None, _for=None, issued_at=None, issued_by=None, amount=None, paid=None, payment=None, initial=None, sale_counter=None, signature=None):  # noqa: E501
         """TopUp - a model defined in Swagger"""  # noqa: E501
         self._uuid = None
         self.__for = None
@@ -61,6 +63,7 @@ class TopUp(object):
         self._paid = None
         self._payment = None
         self._initial = None
+        self._sale_counter = None
         self._signature = None
         self.discriminator = None
         if uuid is not None:
@@ -79,6 +82,8 @@ class TopUp(object):
             self.payment = payment
         if initial is not None:
             self.initial = initial
+        if sale_counter is not None:
+            self.sale_counter = sale_counter
         if signature is not None:
             self.signature = signature
 
@@ -255,6 +260,27 @@ class TopUp(object):
         """
 
         self._initial = initial
+
+    @property
+    def sale_counter(self):
+        """Gets the sale_counter of this TopUp.  # noqa: E501
+
+
+        :return: The sale_counter of this TopUp.  # noqa: E501
+        :rtype: int
+        """
+        return self._sale_counter
+
+    @sale_counter.setter
+    def sale_counter(self, sale_counter):
+        """Sets the sale_counter of this TopUp.
+
+
+        :param sale_counter: The sale_counter of this TopUp.  # noqa: E501
+        :type: int
+        """
+
+        self._sale_counter = sale_counter
 
     @property
     def signature(self):

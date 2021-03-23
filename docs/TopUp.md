@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **paid** | **int** |  | [optional] 
 **payment** | [**Payment**](Payment.md) |  | [optional] 
 **initial** | **bool** | Describes whether the top up was done when the card was issued | [optional] 
+**sale_counter** | **int** |  | [optional] 
 **signature** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

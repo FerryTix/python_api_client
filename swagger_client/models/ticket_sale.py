@@ -35,6 +35,7 @@ class TicketSale(object):
         '_from': 'MachineLocation',
         'payment': 'Payment',
         'positions': 'list[Position]',
+        'sale_counter': 'int',
         'signature': 'str'
     }
 
@@ -46,10 +47,11 @@ class TicketSale(object):
         '_from': 'from',
         'payment': 'payment',
         'positions': 'positions',
+        'sale_counter': 'saleCounter',
         'signature': 'signature'
     }
 
-    def __init__(self, uuid=None, issued_by=None, issued_at=None, return_valid=None, _from=None, payment=None, positions=None, signature=None):  # noqa: E501
+    def __init__(self, uuid=None, issued_by=None, issued_at=None, return_valid=None, _from=None, payment=None, positions=None, sale_counter=None, signature=None):  # noqa: E501
         """TicketSale - a model defined in Swagger"""  # noqa: E501
         self._uuid = None
         self._issued_by = None
@@ -58,6 +60,7 @@ class TicketSale(object):
         self.__from = None
         self._payment = None
         self._positions = None
+        self._sale_counter = None
         self._signature = None
         self.discriminator = None
         if uuid is not None:
@@ -74,6 +77,8 @@ class TicketSale(object):
             self.payment = payment
         if positions is not None:
             self.positions = positions
+        if sale_counter is not None:
+            self.sale_counter = sale_counter
         if signature is not None:
             self.signature = signature
 
@@ -223,6 +228,27 @@ class TicketSale(object):
         """
 
         self._positions = positions
+
+    @property
+    def sale_counter(self):
+        """Gets the sale_counter of this TicketSale.  # noqa: E501
+
+
+        :return: The sale_counter of this TicketSale.  # noqa: E501
+        :rtype: int
+        """
+        return self._sale_counter
+
+    @sale_counter.setter
+    def sale_counter(self, sale_counter):
+        """Sets the sale_counter of this TicketSale.
+
+
+        :param sale_counter: The sale_counter of this TicketSale.  # noqa: E501
+        :type: int
+        """
+
+        self._sale_counter = sale_counter
 
     @property
     def signature(self):
