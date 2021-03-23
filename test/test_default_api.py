@@ -82,12 +82,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_machines_uuid_replace_paper_roll_post(self):
-        """Test case for machines_uuid_replace_paper_roll_post
-
-        """
-        pass
-
     def test_machines_uuid_status_get(self):
         """Test case for machines_uuid_status_get
 

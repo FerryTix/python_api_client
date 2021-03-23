@@ -155,7 +155,7 @@ configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
-body = 'body_example' # str | 
+body = swagger_client.MachineCommand() # MachineCommand | 
 uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | 
 
 try:
@@ -196,23 +196,6 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->machines_uuid_get: %s\n" % e)
-
-# Configure API key authorization: ApiKeyAuth
-configuration = swagger_client.Configuration()
-configuration.api_key['X-API-KEY'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-API-KEY'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
-body = 56 # int | 
-uuid = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | 
-
-try:
-    api_response = api_instance.machines_uuid_replace_paper_roll_post(body, uuid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->machines_uuid_replace_paper_roll_post: %s\n" % e)
 
 # Configure API key authorization: ApiKeyAuth
 configuration = swagger_client.Configuration()
@@ -293,7 +276,6 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**machines_uuid_commands_post**](docs/DefaultApi.md#machines_uuid_commands_post) | **POST** /machines/{uuid}/commands | 
 *DefaultApi* | [**machines_uuid_config_patch**](docs/DefaultApi.md#machines_uuid_config_patch) | **PATCH** /machines/{uuid}/config | 
 *DefaultApi* | [**machines_uuid_get**](docs/DefaultApi.md#machines_uuid_get) | **GET** /machines/{uuid} | 
-*DefaultApi* | [**machines_uuid_replace_paper_roll_post**](docs/DefaultApi.md#machines_uuid_replace_paper_roll_post) | **POST** /machines/{uuid}/replacePaperRoll | 
 *DefaultApi* | [**machines_uuid_status_get**](docs/DefaultApi.md#machines_uuid_status_get) | **GET** /machines/{uuid}/status | 
 *DefaultApi* | [**machines_uuid_status_patch**](docs/DefaultApi.md#machines_uuid_status_patch) | **PATCH** /machines/{uuid}/status | 
 *DefaultApi* | [**ticket_sales_post**](docs/DefaultApi.md#ticket_sales_post) | **POST** /ticketSales | 
@@ -314,11 +296,13 @@ Class | Method | HTTP request | Description
  - [MachineLocation](docs/MachineLocation.md)
  - [MachineStatus](docs/MachineStatus.md)
  - [MachineStatusTicketsSoldToday](docs/MachineStatusTicketsSoldToday.md)
+ - [OneOfMachineCommand](docs/OneOfMachineCommand.md)
  - [OneOfPaymentMethod](docs/OneOfPaymentMethod.md)
  - [PayPalPayment](docs/PayPalPayment.md)
  - [Payment](docs/Payment.md)
  - [PaymentMethod](docs/PaymentMethod.md)
  - [Position](docs/Position.md)
+ - [RefillPaperRollCommand](docs/RefillPaperRollCommand.md)
  - [StaffMember](docs/StaffMember.md)
  - [StaffRole](docs/StaffRole.md)
  - [TicketClass](docs/TicketClass.md)
