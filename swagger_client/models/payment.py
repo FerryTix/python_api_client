@@ -31,7 +31,7 @@ class Payment(object):
         'uuid': 'str',
         'amount': 'int',
         'method': 'str',
-        'details': 'PaymentMethod'
+        'details': 'OneOfPaymentDetails'
     }
 
     attribute_map = {
@@ -132,7 +132,7 @@ class Payment(object):
 
 
         :return: The details of this Payment.  # noqa: E501
-        :rtype: PaymentMethod
+        :rtype: OneOfPaymentDetails
         """
         return self._details
 
@@ -142,7 +142,7 @@ class Payment(object):
 
 
         :param details: The details of this Payment.  # noqa: E501
-        :type: PaymentMethod
+        :type: OneOfPaymentDetails
         """
 
         self._details = details
