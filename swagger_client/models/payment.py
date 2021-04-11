@@ -30,20 +30,23 @@ class Payment(object):
     swagger_types = {
         'uuid': 'str',
         'amount': 'int',
-        'method': 'PaymentMethod'
+        'method': 'str',
+        'details': 'PaymentMethod'
     }
 
     attribute_map = {
         'uuid': 'uuid',
         'amount': 'amount',
-        'method': 'method'
+        'method': 'method',
+        'details': 'details'
     }
 
-    def __init__(self, uuid=None, amount=None, method=None):  # noqa: E501
+    def __init__(self, uuid=None, amount=None, method=None, details=None):  # noqa: E501
         """Payment - a model defined in Swagger"""  # noqa: E501
         self._uuid = None
         self._amount = None
         self._method = None
+        self._details = None
         self.discriminator = None
         if uuid is not None:
             self.uuid = uuid
@@ -51,6 +54,8 @@ class Payment(object):
             self.amount = amount
         if method is not None:
             self.method = method
+        if details is not None:
+            self.details = details
 
     @property
     def uuid(self):
@@ -100,7 +105,7 @@ class Payment(object):
 
 
         :return: The method of this Payment.  # noqa: E501
-        :rtype: PaymentMethod
+        :rtype: str
         """
         return self._method
 
@@ -110,10 +115,37 @@ class Payment(object):
 
 
         :param method: The method of this Payment.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["FährCard", "Cash", "ECCard", "BankTransfer", "PayPal"]  # noqa: E501
+        if method not in allowed_values:
+            raise ValueError(
+                "Invalid value for `method` ({0}), must be one of {1}"  # noqa: E501
+                .format(method, allowed_values)
+            )
+
+        self._method = method
+
+    @property
+    def details(self):
+        """Gets the details of this Payment.  # noqa: E501
+
+
+        :return: The details of this Payment.  # noqa: E501
+        :rtype: PaymentMethod
+        """
+        return self._details
+
+    @details.setter
+    def details(self, details):
+        """Sets the details of this Payment.
+
+
+        :param details: The details of this Payment.  # noqa: E501
         :type: PaymentMethod
         """
 
-        self._method = method
+        self._details = details
 
     def to_dict(self):
         """Returns the model properties as a dict"""
