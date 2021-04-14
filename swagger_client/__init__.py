@@ -34,10 +34,8 @@ from swagger_client.models.machine_location import MachineLocation
 from swagger_client.models.machine_status import MachineStatus
 from swagger_client.models.machine_status_tickets_sold_today import MachineStatusTicketsSoldToday
 from swagger_client.models.one_of_machine_command import OneOfMachineCommand
-from swagger_client.models.one_of_payment_method import OneOfPaymentMethod
 from swagger_client.models.pay_pal_payment import PayPalPayment
 from swagger_client.models.payment import Payment
-from swagger_client.models.payment_method import PaymentMethod
 from swagger_client.models.position import Position
 from swagger_client.models.refill_paper_roll_command import RefillPaperRollCommand
 from swagger_client.models.staff_member import StaffMember
